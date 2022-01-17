@@ -1,0 +1,6 @@
+<div class="user-account">
+  <button (click)="popupHandle()" [matMenuTriggerFor]="x.menu" mat-raised-button>
+    <mat-icon>account_circle</mat-icon>Аккаунт
+  </button>
+  <app-user-account-popup #x="menuInOtherComponent"></app-user-account-popup>
+</div>

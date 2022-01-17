@@ -5,6 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { SidenavListModule } from '../sidenav-list/sidenav-list.module';
 import { ContactsModule } from 'src/app/shop/modules/contacts/contacts.module';
+import { UserLocationModule } from 'src/app/shop/modules/user-location/user-location.module';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -14,6 +15,7 @@ import { ContactsModule } from 'src/app/shop/modules/contacts/contacts.module';
     RouterModule,
     SidenavListModule,
     ContactsModule,
+    UserLocationModule,
   ],
   exports: [HeaderComponent],
 })

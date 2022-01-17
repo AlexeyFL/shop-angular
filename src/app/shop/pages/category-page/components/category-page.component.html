@@ -1,0 +1,9 @@
+<div class="categories">
+  <div class="container">
+    <div *ngIf="isLoading$ | async">Loading...</div>
+
+    <div class="row">
+      <app-good class="col-3"  *ngFor="let good of goods$ | async" [good]="good"></app-good>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.categories-page {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ebebeb;
+}
+
+.categories-list {
+  .categories-list__link {
+    &.active {
+      background: #673ab7;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="auth-form">
+    <app-backend-error-messages *ngIf="backendErrors$ | async"
+      [backendErrors]="backendErrors$ | async"
+    ></app-backend-error-messages>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Логин</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Логин"
+            formControlName="login"
+            required
+          />
+          <mat-error>Поле не должно быть пустым.</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Пароль</mat-label>
+          <input
+            matInput
+            type="password"
+            placeholder="Пароль"
+            formControlName="password"
+            required
+            minlength="4"
+          />
+          <mat-error>Не меньше 4 символов.</mat-error>
+        </mat-form-field>
+      </div>
+
+      <button
+        [disabled]="isSubmitting$ | async"
+        type="submit"
+        mat-raised-button
+      >
+        Отправить
+      </button>
+    </form>
+  </div>
+</div>

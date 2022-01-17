@@ -1,0 +1,31 @@
+<div class="categories-page">
+  <div class="container">
+    <h1 class="categories-page__heading">Категории</h1>
+    <div class="row">
+      <div class="categories-page__item col-6">
+        <ul class="categories-list list">
+          <li
+            class="categories-list__item list__item"
+            *ngFor="let category of categories$ | async; let i = index"
+          >
+            <a
+              class="categories-list__link list__link"
+              [ngClass]="{ active: selectedItem === i }"
+              (mouseenter)="
+                setCurrentCategoryId(category.id); setSelectedItem(i)
+              "
+              [routerLink]="[category.id]"
+              >{{ category.name }}</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="categories-page__item col-6">
+        <app-sub-categories
+          [currentSubCategories]="currentSubCategories$"
+          [currentCategory]="currentCategory"
+        ></app-sub-categories>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,8 @@
-<footer class="footer">
-  <div class="container">
-    <a target="_blank" href="https://github.com/AlexeyFL" class="footer__link"
-      >AlexeyFL</a
-    >
-  </div>
-</footer>
+<mat-form-field appearance="fill">
+  <mat-label><mat-icon> location_on</mat-icon>Ваш город</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let city of cities" [value]="city">{{
+      city
+    }}</mat-option>
+  </mat-select>
+</mat-form-field>

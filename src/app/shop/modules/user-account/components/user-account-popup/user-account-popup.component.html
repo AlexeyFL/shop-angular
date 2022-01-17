@@ -1,0 +1,14 @@
+<mat-menu class="popup user-account__popup">
+  <mat-card class="card">
+    <mat-card-title *ngIf="!(user$ | async)">Anonimous</mat-card-title>
+    <mat-card-title *ngIf="user$ | async">{{(user$ | async)?.firstName}}</mat-card-title>
+    <mat-card-subtitle *ngIf="user$ | async">{{(user$ | async)?.lastName}}</mat-card-subtitle>
+    <mat-card-actions *ngIf="!(user$ | async)">
+      <button (click)="navigateTo('login')" mat-button>Войти</button>
+      <button (click)="navigateTo('register')" mat-button>Регистрация</button>
+    </mat-card-actions>
+    <mat-card-actions *ngIf="user$ | async">
+      <button (click)="logout()" mat-button>Выйти</button>
+    </mat-card-actions>
+  </mat-card>
+</mat-menu>

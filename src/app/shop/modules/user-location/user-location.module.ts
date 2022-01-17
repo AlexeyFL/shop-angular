@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from './components/footer.component';
+import { UserLocationComponent } from './components/user-location.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+
 
 @NgModule({
-  declarations: [FooterComponent],
-  imports: [CommonModule],
-  exports: [FooterComponent],
+  declarations: [UserLocationComponent],
+  imports: [CommonModule, SharedModule],
+  exports: [UserLocationComponent],
 })
-export class FooterModule {}
+export class UserLocationModule {
+
+}

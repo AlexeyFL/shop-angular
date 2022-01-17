@@ -1,0 +1,16 @@
+<ul
+  class="categories-list list"
+  *ngIf="currentSubCategories | async as category"
+>
+  <li
+    class="categories-list__item"
+    *ngFor="let subCategory of category.subCategories"
+  >
+    <a
+      (click)="goTo(currentCategory, subCategory.id)"
+      class="categories-list__link list__link"
+      [routerLink]="[currentCategory, subCategory.id]"
+      >{{ subCategory.name }}</a
+    >
+  </li>
+</ul>

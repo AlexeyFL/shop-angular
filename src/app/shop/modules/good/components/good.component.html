@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ good.name | cutString: 20 }}</mat-card-title>
+  </mat-card-header>
+  <div class="card__image">
+    <img mat-card-image src="{{ good.imageUrls[0] }}" alt="{{ good.name }}" />
+  </div>
+  <mat-card-content>
+    <p>
+      {{ good.description | cutString: 120 }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

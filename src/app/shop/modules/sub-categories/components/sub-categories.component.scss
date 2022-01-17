@@ -1,0 +1,19 @@
+.mat-form-field {
+  font-size: 14px;
+  top: 8px;
+  mat-icon {
+    position: relative;
+    top: 2px;
+    font-size: 16px;
+  }
+}
+
+.categories-list {
+  column-count: 2;
+  .categories-list__link {
+    &:hover {
+      background: #673ab7;
+      color: #fff;
+    }
+  }
+}
